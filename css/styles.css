@@ -870,6 +870,27 @@ body {
   margin-bottom: 24px;
 }
 
+.castom-checkbox {
+  display: block;
+  content: '';
+  width: 16px;
+  height: 16px;
+  padding: 4px 3px;
+  border: 1px solid rgba(46, 47, 66, 0.4);
+  border-radius: 2px;
+  cursor: pointer;
+  fill: transparent;
+  background-color: transparent;
+  transition: background-color var(--transition-dur-and-func),
+    border var(--transition-dur-and-func), fill var(--transition-dur-and-func);
+}
+
+.modal-checkbox:checked + .castom-checkbox {
+  background-color: rgba(64, 75, 191, 1);
+  border: none;
+  fill: rgba(244, 244, 253, 1);
+}
+
 .checkbox-descr {
   font-family: 'Roboto';
   font-style: normal;
@@ -879,10 +900,14 @@ body {
   letter-spacing: 0.04em;
   color: rgba(142, 143, 153, 1);
   padding-left: 8px;
+  transition: background-color var(--transition-dur-and-func),
+    background-image var(--transition-dur-and-func);
 }
+
 .privacy-link {
   color: rgba(77, 90, 229, 1);
 }
+
 .modal-form-btn {
   display: block;
   color: rgba(255, 255, 255, 1);
